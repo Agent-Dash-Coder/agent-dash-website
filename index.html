@@ -139,7 +139,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .hero-meta span{display:inline-flex;align-items:center;gap:6px}
 .hero-meta svg{color:var(--ok)}
 .play{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;color:var(--ink);background:none;border:0;cursor:pointer;font-family:inherit;padding:4px}
-.play i{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--bg)}
+.play i{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--yellow);color:#0B1A2E;box-shadow:0 0 0 0 rgba(248,220,117,.5);transition:box-shadow .2s}
+.play:hover i{box-shadow:0 0 0 6px rgba(248,220,117,.25)}
 .play:hover{color:var(--accent)}
 @media (max-width:480px){.cta-row .btn{flex:1 1 100%}}
 
@@ -680,6 +681,9 @@ footer{padding-block:40px 24px}
 @media (max-width:900px){.problem{gap:24px}.row{gap:22px}.ft-pane{gap:18px}}
 
 .hero .lede{margin-block:12px 18px}
+
+.hero .play{margin-block:12px 16px}
+.page-hero .play{margin-top:14px}
 </style>
 </head>
 <body>
