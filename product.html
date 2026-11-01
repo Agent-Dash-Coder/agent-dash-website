@@ -101,7 +101,10 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 /* gear badge: white interior, the needle sweeps once on load */
 .hdr-badge{position:relative;display:block;width:58px;height:58px}
 /* yellow border around the gear: a slightly larger gear silhouette painted behind it */
-.hdr-badge,.badge{background:url(assets/agentdash-gear-outline.png) center/117.2% 117.2% no-repeat}
+.hdr-badge,.badge{background:url(assets/agentdash-gear-outline.png) center/100% 100% no-repeat}
+/* the gear sits 85% size inside its box so the teeth and the yellow border are never cut off */
+.hdr-badge img,.badge img{inset:7.35%!important;width:85.3%!important;height:85.3%!important}
+.hdr-badge::before,.badge::before{inset:14.7%!important}
 @media (max-width:560px){.hdr-badge{width:50px;height:50px}}
 .hdr-badge::before{content:"";position:absolute;inset:8.6%;border-radius:50%;background:#FFFFFF}
 .hdr-badge img{position:absolute;inset:0;width:100%;height:100%}
