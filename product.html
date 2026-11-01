@@ -103,10 +103,10 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 /* the gear sits 85% size inside its box so the teeth are never cut off */
 .hdr-badge img,.badge img{inset:7.35%!important;width:85.3%!important;height:85.3%!important}
 .hdr-badge::before,.badge::before{inset:14.7%!important}
-@media (max-width:560px){.hdr-badge{width:64px;height:64px;margin-block:-2px}}
+@media (max-width:640px){.hdr-badge{width:64px;height:64px;margin-block:-2px}}
 .hdr-badge::before{content:"";position:absolute;inset:8.6%;border-radius:50%;background:#FFFFFF}
 .hdr-badge img{position:absolute;inset:0;width:100%;height:100%}
-.hdr-badge .needle{transform-origin:50% 45.81%;animation:lrsweep 2.6s ease-in-out infinite alternate both}
+.hdr-badge .needle{transform-origin:50% 45.81%;animation:lrsweep 1.5s cubic-bezier(.45,0,.55,1) infinite alternate both;will-change:transform;backface-visibility:hidden}
 @keyframes hdrfill{0%,100%{background:var(--yellow);box-shadow:0 0 14px rgba(248,220,117,.45)}50%{background:#FFFFFF;box-shadow:0 0 6px rgba(248,220,117,.15)}}
 /* needle glides smoothly from the left end of the dial to the right end and back, without pausing */
 @keyframes lrsweep{from{transform:rotate(-135deg)}to{transform:rotate(45deg)}}
@@ -392,7 +392,7 @@ details p{padding:0 36px 22px 0;color:var(--muted);font-size:16px}
 .badge{position:relative;width:76px;height:76px}
 .badge::before{content:"";position:absolute;inset:8.6%;border-radius:50%;background:#FFFFFF}
 .badge img{position:absolute;inset:0;width:100%;height:100%}
-.badge .needle{transform-origin:50% 45.81%;animation:lrsweep 2.6s ease-in-out infinite alternate both}
+.badge .needle{transform-origin:50% 45.81%;animation:lrsweep 1.5s cubic-bezier(.45,0,.55,1) infinite alternate both;will-change:transform;backface-visibility:hidden}
 @keyframes badgefill{0%,10%{background:#FFFFFF;box-shadow:none}30%,70%{background:var(--yellow);box-shadow:0 0 36px rgba(248,220,117,.5)}90%,100%{background:#FFFFFF;box-shadow:none}}
 .start h2{color:#fff;font-size:clamp(28.9px,3.9vw,47.6px);font-weight:700;letter-spacing:-.028em}
 .start-copy>p{font-size:18px;color:#AFC0E2;max-width:34em}
