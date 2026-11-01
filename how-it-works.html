@@ -99,11 +99,9 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .hdr-in{display:flex;align-items:center;gap:36px;height:84px}
 .logo{display:flex;align-items:center}
 /* gear badge: white interior, the needle sweeps once on load */
-.hdr-badge{position:relative;display:block;width:80px;height:80px;margin-block:-6px}
-/* the gear sits 85% size inside its box so the teeth are never cut off */
-.hdr-badge img,.badge img{inset:7.35%!important;width:85.3%!important;height:85.3%!important}
-.hdr-badge::before,.badge::before{inset:14.7%!important}
-@media (max-width:640px){.hdr-badge{width:64px;height:64px;margin-block:-2px}}
+.hdr-badge{position:relative;display:block;width:68px;height:68px}
+/* same logo as the product dashboard: yellow gear, white interior, needle sweeping left to right */
+@media (max-width:640px){.hdr-badge{width:55px;height:55px}}
 .hdr-badge::before{content:"";position:absolute;inset:8.6%;border-radius:50%;background:#FFFFFF}
 .hdr-badge img{position:absolute;inset:0;width:100%;height:100%}
 .hdr-badge .needle{transform-origin:50% 45.81%;animation:lrsweep 1.5s cubic-bezier(.45,0,.55,1) infinite alternate both;will-change:transform;backface-visibility:hidden}
@@ -421,7 +419,7 @@ footer{background:#060E1A;border-top:1px solid var(--band-line);color:#93A6CB;pa
 .foot{display:grid;grid-template-columns:minmax(0,1.5fr) repeat(3,minmax(0,1fr));gap:32px}
 .foot .brand{display:flex;align-items:center;gap:12px;align-self:start;max-width:320px}
 .foot .brand p{margin:0;font-size:14px;line-height:1.45;font-weight:500;color:#C9D6F2;max-width:190px;padding-left:12px;border-left:1px solid rgba(169,193,255,.25)}
-.foot .brand .foot-badge{width:76px;height:76px;margin:0;flex-shrink:0}
+.foot .brand .foot-badge{width:68px;height:68px;margin:0;flex-shrink:0}
 .foot h4{margin:0 0 14px;color:#fff;font-size:13px;font-weight:600}
 .foot ul{display:grid;gap:9px}
 .foot a{color:#93A6CB}.foot a:hover{color:#fff}
@@ -687,13 +685,6 @@ footer{padding-block:40px 24px}
 
 .hero .play{margin-block:12px 16px}
 .page-hero .play{margin-top:14px}
-
-/* Nov 1 2026: yellow gear logo, identical to the product dashboard header logo (76px, 62px on phones; gear, dial, wording and needle baked into the two PNGs) */
-.hdr-badge{width:76px;height:76px;margin-block:-4px}
-@media (max-width:640px){.hdr-badge{width:62px;height:62px;margin-block:0}}
-.hdr-badge img,.badge img{inset:0!important;width:100%!important;height:100%!important}
-.hdr-badge::before,.badge::before,.app-logo::before{display:none}
-.hdr-badge .needle,.badge .needle{transform-origin:50% 46.81%;animation:lrsweep 1.5s cubic-bezier(.45,0,.55,1) 3 alternate both}
 </style>
 </head>
 <body>
@@ -703,7 +694,7 @@ footer{padding-block:40px 24px}
 </div>
 <header class="site-hdr" id="top">
   <div class="wrap hdr-in">
-    <a class="logo" href="index.html" aria-label="AgentDash home"><span class="hdr-badge"><img src="assets/agentdash-dial.png" alt="AgentDash" width="80" height="80"><img class="needle" src="assets/agentdash-needle.png" alt="" width="80" height="80"></span></a>
+    <a class="logo" href="index.html" aria-label="AgentDash home"><span class="hdr-badge"><img src="assets/agentdash-dial.png" alt="AgentDash" width="68" height="68"><img class="needle" src="assets/agentdash-needle.png" alt="" width="68" height="68"></span></a>
     <nav class="nav" id="nav" aria-label="Main">
       <a href="product.html">Product</a>
       <a href="how-it-works.html">How it works</a>
@@ -840,7 +831,7 @@ ad.<span class="f">record_llm_call</span>(agent=<span class="s">"my-agent"</span
   <div class="wrap">
     <div class="foot">
       <div class="brand">
-        <span class="hdr-badge foot-badge"><img src="assets/agentdash-dial.png" alt="AgentDash" width="80" height="80"><img class="needle" src="assets/agentdash-needle.png" alt="" width="80" height="80"></span>
+        <span class="hdr-badge foot-badge"><img src="assets/agentdash-dial.png" alt="AgentDash" width="68" height="68"><img class="needle" src="assets/agentdash-needle.png" alt="" width="68" height="68"></span>
         <p>The dashboard for every AI agent in your organization.</p>
       </div>
       <div><h4>Product</h4><ul><li><a href="product.html">Features</a></li><li><a href="how-it-works.html">How it works</a></li><li><a href="security.html">Security</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
