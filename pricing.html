@@ -99,8 +99,10 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .hdr-in{display:flex;align-items:center;gap:36px;height:84px}
 .logo{display:flex;align-items:center}
 /* gear badge: white interior, the needle sweeps once on load */
-.hdr-badge{position:relative;display:block;width:76px;height:76px;margin-block:-4px}
-@media (max-width:560px){.hdr-badge{width:62px;height:62px;margin-block:0}}
+.hdr-badge{position:relative;display:block;width:58px;height:58px}
+/* yellow border around the gear: a slightly larger gear silhouette painted behind it */
+.hdr-badge,.badge{background:url(assets/agentdash-gear-outline.png) center/117.2% 117.2% no-repeat}
+@media (max-width:560px){.hdr-badge{width:50px;height:50px}}
 .hdr-badge::before{content:"";position:absolute;inset:8.6%;border-radius:50%;background:#FFFFFF}
 .hdr-badge img{position:absolute;inset:0;width:100%;height:100%}
 .hdr-badge .needle{transform-origin:50% 45.3%;animation:lrsweep 6s .2s ease-in-out infinite both}
@@ -418,7 +420,7 @@ footer{background:#060E1A;border-top:1px solid var(--band-line);color:#93A6CB;pa
 .foot{display:grid;grid-template-columns:minmax(0,1.5fr) repeat(3,minmax(0,1fr));gap:32px}
 .foot .brand{display:flex;align-items:center;gap:12px;align-self:start;max-width:320px}
 .foot .brand p{margin:0;font-size:14px;line-height:1.45;font-weight:500;color:#C9D6F2;max-width:190px;padding-left:12px;border-left:1px solid rgba(169,193,255,.25)}
-.foot .brand .foot-badge{width:72px;height:72px;margin:0 0 0 -6px;flex-shrink:0}
+.foot .brand .foot-badge{width:58px;height:58px;margin:0;flex-shrink:0}
 .foot h4{margin:0 0 14px;color:#fff;font-size:13px;font-weight:600}
 .foot ul{display:grid;gap:9px}
 .foot a{color:#93A6CB}.foot a:hover{color:#fff}
@@ -693,7 +695,7 @@ footer{padding-block:40px 24px}
 </div>
 <header class="site-hdr" id="top">
   <div class="wrap hdr-in">
-    <a class="logo" href="index.html" aria-label="AgentDash home"><span class="hdr-badge"><img src="assets/agentdash-dial.png" alt="AgentDash" width="76" height="76"><img class="needle" src="assets/agentdash-needle.png" alt="" width="76" height="76"></span></a>
+    <a class="logo" href="index.html" aria-label="AgentDash home"><span class="hdr-badge"><img src="assets/agentdash-dial.png" alt="AgentDash" width="58" height="58"><img class="needle" src="assets/agentdash-needle.png" alt="" width="58" height="58"></span></a>
     <nav class="nav" id="nav" aria-label="Main">
       <a href="product.html">Product</a>
       <a href="how-it-works.html">How it works</a>
@@ -843,7 +845,7 @@ footer{padding-block:40px 24px}
   <div class="wrap">
     <div class="foot">
       <div class="brand">
-        <span class="hdr-badge foot-badge"><img src="assets/agentdash-dial.png" alt="AgentDash" width="72" height="72"><img class="needle" src="assets/agentdash-needle.png" alt="" width="72" height="72"></span>
+        <span class="hdr-badge foot-badge"><img src="assets/agentdash-dial.png" alt="AgentDash" width="58" height="58"><img class="needle" src="assets/agentdash-needle.png" alt="" width="58" height="58"></span>
         <p>The dashboard for every AI agent in your organization.</p>
       </div>
       <div><h4>Product</h4><ul><li><a href="product.html">Features</a></li><li><a href="how-it-works.html">How it works</a></li><li><a href="security.html">Security</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
